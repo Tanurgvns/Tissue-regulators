@@ -58,9 +58,9 @@ Allcell_marker <- FindAllMarkers(
   return.thresh = 0
 )
 
-# Filter markers for Stem AB cluster only with myAUC >= 0.7
-stem_AB_clusters <- filter(Allcell_marker, cluster == "StemAB" & myAUC >= 0.7)
-miracidia_stem <- stem_AB_clusters %>%
+# Filter markers for Stem CD cluster only with myAUC >= 0.7
+stem_CD_clusters <- filter(Allcell_marker, cluster == "StemCD" & myAUC >= 0.7)
+miracidia_stem <- stem_CD_clusters %>%
   select(gene) %>%
   distinct()
 
